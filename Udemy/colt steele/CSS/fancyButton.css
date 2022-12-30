@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body{
+    background-color: #003049;
+
+    /* CENTRE BUTTON 1st WAY */
+    display: grid;
+    place-items: center;
+
+    /* CENTRE BUTTON 2nd WAY */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+button{
+    /* CENTRE BUTTON 3rd WAY */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    background-color: #003049;
+    border: 2px #9b2525 solid;
+    border-radius: 05px;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #a11f1f;
+
+    padding: 0.5em 0.8em;
+    /* width: 7em; */
+    /* height: 3em; */
+    
+    transition: transform 0.2s ease-in-out, box-shadow 0.05s ease-in-out, color 0.1s ease-in-out;
+}
+
+button:hover{
+    /* transform: scale(110%);  */
+    transform: translateY(-0.25em);
+
+    border-color: #c94141;
+    color: #ffcdcd;
+    box-shadow: rgba(183, 88, 88, 0.337) 0px 54px 55px, rgba(175, 51, 51, 0.647) 0px -12px 30px, rgba(170, 38, 38, 0.51) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

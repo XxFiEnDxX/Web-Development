@@ -93,3 +93,22 @@ button:nth-of-type(2n){
 }
 
 /* Pseudo Elements */
+/* ::first-letter
+::after
+::before
+::first-line
+::selection */
+
+h1::first-letter{
+  font-size: 35px;
+}
+
+p::first-line{
+  color: #d83726;
+}
+
+p::selection{
+  color: rgb(8, 6, 125);
+  background-color: aquamarine;
+}
+

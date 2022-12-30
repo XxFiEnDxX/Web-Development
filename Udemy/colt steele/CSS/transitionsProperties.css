@@ -1,0 +1,18 @@
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 1%;
+    background-color: lightcoral;
+    transition: 1s , margin-left 3s ease-in-out;
+}
+
+.circle:hover{
+    border-radius: 50%;
+    background-color: rgb(231, 62, 62);
+    margin-left: 300px;
+}
+
+/* property name
+duration
+timing function
+delay */
