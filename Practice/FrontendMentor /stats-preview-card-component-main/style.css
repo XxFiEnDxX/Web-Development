@@ -12,8 +12,8 @@ body {
 .card {
   background-color: hsl(244, 38%, 16%);
 
-  /* height: 60vh;  */
-  min-height: 400px;
+  height: 60vh; 
+  /* min-height: 400px; */
   /* width: 100vh; */
   border-radius: 0.6em;
 
