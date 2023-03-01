@@ -6,32 +6,24 @@ import Modal from "./Modal";
 
 import classes from "./Postlist.module.css";
 
-function Postlist({isPosting,hideModal}) {
-  const [enterBody, setEnterBody] = useState("");
-  const [enterAuthor, setEnterAuthor] = useState("");
-
-  function bodyChangeHandler(event) {
-    setEnterBody(event.target.value);
-  }
-
-  function authorChangeHandler(event) {
-    setEnterAuthor(event.target.value);
-  }
+function Postlist({ isPosting, hideModal }) {
 
   return (
     <>
       {isPosting && (
-        <Modal onClose={hideModal} >
+        <Modal onClose={hideModal}>
           <NewPost
-            onBodyChange={bodyChangeHandler}
-            onAuthorChange={authorChangeHandler}
+            onClose={hideModal}
           />
         </Modal>
       )}
 
       <ul className={classes.posts}>
-        <Post author={enterAuthor} body={enterBody} />
-        <Post author="fiend" body="react is fun!" />
+        <Post
+          author="Amit Kumar Singh"
+          body="I don't think that things necessarily happen for the best.
+However, we can learn to make the best."
+        />
         {/* <Post author="fiend" body="react is fun!" /> */}
       </ul>
     </>
