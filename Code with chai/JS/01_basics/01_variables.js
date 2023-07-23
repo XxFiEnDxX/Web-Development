@@ -1,12 +1,12 @@
-    const actID = 2110990163
-    let actEmail = "amit@gmail.com"
-    var actPass = "@amit123"
-    actCity = "Uttar pradesh"
-    let actstate;
+    const actID = 2110990163 //can't change value of const.
+    let actEmail = "amit@gmail.com"//can change value of let
+    var actPass = "@amit123" //can change value of var.
+    actCity = "Uttar pradesh" //can declare variable like this; 
+    let actstate; //undefined
 
 
 
-    actID = 2 // not allowed
+    //actID = 2 //actId in a const variable.
 
     actEmail = "Kumar@gmail.com"
     actPass = "212121"
@@ -16,7 +16,7 @@
 
     /*
     Perfer not to use "var"
-    because of issue in block scopes and funtional scopes
+    because of issue in block scope and funtional scope
     */
 
-    console.table([actID,actEmail,actPass,actCity,actstate])
+    console.table([actID,actEmail,actPass,actCity,actstate])// [] is an array
