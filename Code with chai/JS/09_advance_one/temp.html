@@ -48,35 +48,34 @@
 </body>
 <script>
     const container = document.querySelector('.users')
-    
-    const url = 'https://randomuser.me/api/'
-    let data
+
     for (let i = 0; i < 14; i++) {
+        fetch('https://randomuser.me/api/')
+        .then((response)=>{
+            return response.json();
+        })
+        .then((data)=>{
+            console.log(data);
+            
+            const child = document.createElement('div')
+            child.className = 'childs'
         
-        const request = new XMLHttpRequest();
-        request.open('GET',url)
-        request.send()
-        request.onreadystatechange = function () {
-            if (request.readyState === 4) {
-                data = JSON.parse(this.responseText)
-    
-                const child = document.createElement('div')
-                child.className = 'childs'
+            const image = document.createElement('img')
+            image.src = data.results[0].picture.large
             
-                const image = document.createElement('img')
-                image.src = data.results[0].picture.large
-                
-                const name = document.createElement('h3')
-                name.innerText = data.results[0].name.first
-                name.style.textAlign = 'center'
-            
-                child.appendChild(image)
-                child.appendChild(name)
-            
-                container.append(child)
-    
-            }
-        }
+            const name = document.createElement('h3')
+            name.innerText = data.results[0].name.first
+            name.style.textAlign = 'center'
+        
+            child.appendChild(image)
+            child.appendChild(name)
+        
+            container.append(child)
+        })
+        .catch((error)=>{
+            console.log(error+" catch");
+        })
+
 
     }
 
